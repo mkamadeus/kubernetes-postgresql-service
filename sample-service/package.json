@@ -1,0 +1,47 @@
+{
+  "name": "backend-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "preinstall": "npx only-allow yarn",
+    "start": "ts-node-transpile-only src/app.ts",
+    "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/app.ts",
+    "build": "tsc",
+    "migrate": "prisma generate && prisma migrate dev",
+    "lint": "eslint ./src/ --ext .ts --max-warnings 0",
+    "lint:fix": "eslint ./src/ --ext .ts --fix"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.24.1",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.17.0",
+    "fastify-autoroutes": "^1.4.0",
+    "fastify-swagger": "^4.8.2",
+    "reflect-metadata": "^0.1.13",
+    "tsconfig-paths": "^3.9.0",
+    "typedi": "^0.10.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/dotenv": "^8.2.0",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^15.12.2",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-unused-imports": "^1.1.1",
+    "husky": "^6.0.0",
+    "nodemon": "^2.0.9",
+    "prettier": "^2.3.1",
+    "prisma": "^2.24.1",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.2"
+  }
+}
