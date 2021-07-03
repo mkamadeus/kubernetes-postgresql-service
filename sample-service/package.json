@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install",
     "preinstall": "npx only-allow yarn",
     "start": "ts-node-transpile-only src/app.ts",
     "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/app.ts",
